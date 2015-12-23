@@ -55,7 +55,6 @@ header.page-head {
 .section__title {
     width: span(5);
     margin: 0 gutter() 0 0;
-    padding: 1em;
     background-color: $lt-grey;
 }
 
@@ -93,6 +92,16 @@ li.services__item {
 
 .services__text-group {
     padding: 1em;
+}
+
+/* Booking */
+
+.form--book {
+    display: none;
+}
+
+.book__text {
+    width: span(8);
 }
 
 
