@@ -1,48 +1,53 @@
-body {
-    padding: 1em;
-}
-
-nav.page-nav--desktop,
 header,
 section,
 footer {
     margin-bottom: 1em;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: $padding;
 }
 
 .wrapper {
-    @include container;
-    border: 1px dotted $lt-grey;
-    padding: 1em;
+    width: span(10);
+    //border: 1px dotted $lt-grey;
+    padding: $padding;
 }
 
 /* Nav */
 
 nav.page-nav--desktop {
-    text-align: center;
+    width: span(2);
+    position: fixed;
+    padding: $padding;
 }
 
 ul.nav__list {
     list-style: none;
     margin: 0 auto;
     padding: 0;
-    width: span(6);
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
 li.nav__item {
-    padding: 1em;
+    padding: 2em 0;
 }
 
 /* Header */
 
-header.page-head {
-    background-color: lighten($lt-grey, 30%);
-    padding: 1em;
+.wrapper--header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: $padding-m;
 }
 
+.header__company-name,
 .header__subhead {
-    margin-left: span(4) + gutter();
+    margin-left: span(4);
+    padding-left: gutter();
 }
 
 .header__text-group {
@@ -52,32 +57,70 @@ header.page-head {
 
 /* About section */
 
-.section__title {
-    width: span(5);
+.about__col--1 {
+    width: span(5 of 10);
     margin: 0 gutter() 0 0;
-    background-color: $lt-grey;
+    background-color: $ruby;
+    color: $white;
+    padding: $padding;
+    height: 33.33vh;
 }
 
 .wrapper--about {
     display: flex;
+    align-items: flex-start;
 }
 
 .about__text {
-    width: span(8);
-    margin-left: span(-1) + gutter();
+    width: span(7 of 10);
+    margin-left: span(-2) + gutter();
+    align-self: flex-end;
+    padding-left: $padding-m;
+    border-left: 2px solid $ruby;
+    img {
+        margin-bottom: $padding-m;
+    }
 }
 
 /* Services section */
 
-section.services {
-    background-color: lighten($lt-grey, 30%);
-    padding: 1em;
-}
-
 li.services__item {
     display: flex;
+    align-items: flex-start;
+    margin-bottom: $padding-m;
+    .services__text-group {
+        padding: $padding 0 $padding $padding-m;
+    }
+    
+    h3 {
+        margin-left: span(-2);
+        background-color: $black;
+        color: $white;
+        letter-spacing: 0.1em;
+        padding: $padding;
+        position: relative;
+    }
+    &:first-child {
+        h3 {
+            background-color: $black;
+        }
+    }
     &:nth-child(2n) {
         flex-direction: row-reverse;
+        .services__text-group {
+            padding: $padding $padding-m $padding 0;
+        }
+        h3 {
+            margin-right: span(-2);
+            margin-left: 0;
+            background-color: $black;
+        }
+    }
+    &:first-child,
+    &:last-child {
+        h3 {
+            padding-left: span(1);
+        }
     }
 }
 
@@ -86,22 +129,58 @@ li.services__item {
     width: 50%;
 }
 
-.services__img {
-    background-color: $lt-grey;
-}
-
-.services__text-group {
-    padding: 1em;
-}
-
 /* Booking */
 
-.form--book {
-    display: none;
+
+.wrapper--bookings {
+    display: flex;
+    align-items: flex-start;
 }
 
+.form--book {
+    padding: $padding-m;
+    border: 2px solid lighten($lt-grey, 20%);
+    border-radius: .5em;
+    margin-top: $padding-m;
+}
+
+.address {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: baseline;
+    label {
+        width: span(1 of 10);
+    }
+    input {
+        width: span(4 of 10);
+        margin-bottom: $padding;
+        padding: 0.5em;
+    }
+}
+
+
 .book__text {
-    width: span(8);
+    width: span(7 of 10);
+    margin-left: span(-2) + gutter();
+    margin-top: 10em;
+}
+
+.bookings__col--1 {
+    width: span(5 of 10);
+    margin: 0 gutter() 0 0;
+    background-color: $ruby;
+    color: $white;
+    padding: $padding;
+    height: 33.33vh;
+}
+
+
+/* Footer */
+
+footer.page-footer {
+    background-color: lighten($lt-grey, 30%);
+    padding: $padding;
 }
 
 

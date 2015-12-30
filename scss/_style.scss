@@ -1,0 +1,96 @@
+body {
+    background-color: $white;
+    color: $black;
+}
+
+/* Header */
+
+header.page-head {
+    background: url(../img/hair-main_03.png) 180px bottom no-repeat;
+    background-size: contain;
+}
+
+.header__button {
+    @include button;
+    background-color: $turquoise;
+    color: $white;
+}
+
+/* Nav */
+
+.nav__item {
+    a {
+        text-decoration: none;
+        border-bottom: 2px solid $black;
+        padding: .5em 0;
+        color: $black;
+    }
+}
+
+/* Services */
+
+section.services {
+    background-color: lighten($turquoise, 30%);
+}
+
+.services__img {
+    position: relative;
+    border: 1px solid $turquoise;
+}
+
+.services__img-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(45deg, $ruby, transparentize($gold, 0.6) 40%, transparent 70%);
+    padding: $padding;
+}
+
+li.services__item {
+    h3 {
+        clip-path: polygon(0% 0%, 100% 0%, 97% 100%, 0% 100%);
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, 97% 100%, 0% 100%);
+    }
+    &:first-child,
+    &:last-child {
+        h3 {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 3% 100%);
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 3% 100%);
+    }
+    }
+}
+
+/* Bookings */
+
+.form__button {
+    @include button;
+}
+
+.book__text {
+    background-color: $white;
+    padding: $padding $padding-m;
+    border-left: 2px solid $ruby;
+}
+
+.form--book {
+    font-family: $paragraph;
+    fieldset {
+        border: none;
+        padding: none;
+    }
+    input {
+        border: 2px solid lighten($lt-grey, 20%);
+        border-radius: 0.4em;
+    }
+}
+
+a.form__link {
+    &:visited {
+        color: $turquoise;
+        text-decoration: none;
+        border-bottom: 2px solid $turquoise;
+        padding-bottom: 0.5em;
+    }
+}

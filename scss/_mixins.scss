@@ -1,0 +1,14 @@
+@mixin small-text($font-weight) {
+    font-family: $paragraph;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    font-size: 0.8em;
+    font-weight: $font-weight;
+}
+
+@mixin button {
+    padding: 1.2em 2em;
+    border: none;
+    border-radius: 0.4em;
+    @include small-text(400);
+}

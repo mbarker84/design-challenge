@@ -9,9 +9,9 @@
     <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,700|Advent+Pro:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
-    <!--nav-->
-    <nav class="page-nav--desktop">
-        <div class="wrapper">
+    <div class="page-wrapper">
+        <!--nav-->
+        <nav class="page-nav--desktop">
             <h1 class="header__logo">Premi&egrave;re</h1>
             <ul class="nav__list">
                 <li class="nav__item"><a href="">About</a></li>
@@ -19,37 +19,43 @@
                 <li class="nav__item"><a href="">Inspiration</a></li>
                 <li class="nav__item"><a href="">Bookings</a></li>
             </ul>
-        </div>
-    </nav>
-    <!--header-->
-    <header class="page-head">
-        <figure class="header__img--main"></figure>
-        <div class="wrapper">
-            <h1 class="header__subhead">Hair artists</h1>
-            <div class="header__text-group">
-                <h3>Bespoke styling for catwalk, film and special occasions</h3>
-                <button class="header__button">Book a consultation</button>
+        </nav>
+        <!--main-->
+        <main class="page-main">
+        <!--header-->
+        <header class="page-head">
+            <div class="wrapper wrapper--header">
+                <div class="header__group">
+                    <h1 class="header__company-name">Premi&egrave;re</h1>
+                    <h1 class="header__subhead">Hair artists</h1>
+                    <div class="header__text-group">
+                        <h3>Bespoke styling for catwalk, film and special occasions</h3>
+                        <button class="header__button">Book a consultation</button>
+                    </div>
+                </div>
             </div>
-        </div>
-    </header>
-    <!--main-->
-    <main class="page-main">
+        </header>
         <!--about-->
         <section class="about">
             <div class="wrapper wrapper--about">
-                <h2 class="section__title">What We Do</h2>
+                <div class="about__col--1">
+                    <h2 class="section__title">What We Do</h2>
+                </div>
                 <div class="about__text">
+                    <img src="img/hair-main_02.jpg" width="100%" height="auto">
                     <h3>Hair is our artform.</h3>
                     <p>We offer unique, bespoke hair design, for when you want something that truly stands out from the crowd.</p><p>Our virtuoso stylists spend years training with us in order to craft perfectly tailored masterpieces, whatever your occasion. From catwalk to camera lens, weddings to awards ceremonies, with us you&rsquo;ll never have a hair out of place.</p>
                 </div>
             </div>
-        </section>
+    </section>
         <!--services-->
         <section class="services">
             <ul class="services__list wrapper">
                 <!--cuts-->
                 <li class="services__item">
                     <figure class="services__img">
+                        <img src="img/hair-cut_01.jpg" width="100%" height="auto">
+                        <figcaption class="services__img-overlay"><p>Gallery</p></figcaption>
                     </figure>
                     <div class="services__text-group">
                         <h3>Cut</h3>
@@ -60,6 +66,8 @@
                 <!--styling-->
                 <li class="services__item">
                     <figure class="services__img">
+                        <img src="img/hair-style_01.jpg" width="100%" height="auto">
+                        <figcaption class="services__img-overlay"><p>Gallery</p></figcaption>
                     </figure>
                     <div class="services__text-group">
                         <h3>Styling</h3>
@@ -70,6 +78,8 @@
                 <!--colour-->
                 <li class="services__item">
                     <figure class="services__img">
+                        <img src="img/hair-colour_01.jpg" width="100%" height="auto">
+                        <figcaption class="services__img-overlay"><p>Gallery</p></figcaption>
                     </figure>
                     <div class="services__text-group">
                         <h3>Colour and Treatments</h3>
@@ -78,23 +88,30 @@
                     </div>
                 </li>
             </ul>
-        </section>
+    </section>
         <!--book-->
-        <section class="book">
+        <section class="bookings">
             <div class="wrapper">
-                <div class="book__text">
-                    <h2>Book a Consultation</h2>
-                    <p>Wherever you are in the UK, we provide an in-person consultation at your home or place of work as standard, so that you can be confident when making your booking that we&rsquo;ll craft the right solution for you.</p>
+                <div class="wrapper--bookings">
+                    <div class="bookings__col--1">
+                        <h2 class="section__title">Book a Consultation</h2>
+                    </div>
+                    <div class="book__text">
+                        <p>Wherever you are in the UK, we provide an in-person consultation at your home or place of work as standard, so that you can be confident when making your booking that we&rsquo;ll craft the right solution for you.</p>
+                    </div>
                 </div>
                 <form class="form--book">
-                    <label class="form__label--side" for="name">Name</label>
+                    <div class="address">
+                        <label class="form__label--side" for="name">Name</label>
                     <input type="text" name="name" id="name" placeholder="e.g. Kim Kardashian">
                     <label class="form__label--side" for="email" >Email</label>
                     <input type="text" name="email" id="email" placeholder="name@domain.com">
                     <label class="form__label--side" for="address1">Address line 1</label>
                     <input type="text" name="address1" id="address1" placeholder="Building number or name">
                     <label class="form__label--side" for="postcode">Postcode</label>
-                    <input type="text" name="postcode" id="postcode">
+                    <input type="text" name="postcode" id="postcode" placeholder="e.g. BA1 2NN">
+                    </div>
+                    
                     <a class="form__link" href="">Address lookup</a>
                     <label class="form__label--side" for="date" >Date</label>
                     <input type="date" name="date" id="date">
@@ -104,30 +121,20 @@
                     <input type="text" name="stylist" id="stylist">
                     <p>Optionally, you can tell us some information about your hair and desired style, so that our stylists can provide you with as much information as possible during your consultation:</p>
                 </form>
-                <button class="form__button">Book Now</button>
+                <!--<button class="form__button">Book Now</button>-->
             </div>
-        </section>
-        <!--inspiration board-->
-        <section class="inspiration-board">
+    </section>
+        <!--footer-->
+        <footer class="page-footer">
             <div class="wrapper">
-                <h2>Get Inspired</h2>
-                <div class="inspiration__text">
-                    <p>Create your own inspiration board to help us bring your dreams to life!</p>
-                    <button class="inspiration__button">Start now</button>
-                </div>
+                <ul class="footer__social">
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                </ul>
             </div>
-        </section>
-    </main>
-    <!--footer-->
-    <footer class="page-footer">
-        <div class="wrapper">
-            <ul class="footer__social">
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-            </ul>
-        </div>
-    </footer>
- 
+        </footer>
+        </main>
+    </div>
 </body>
 </html>
